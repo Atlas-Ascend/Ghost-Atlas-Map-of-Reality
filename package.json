@@ -1,0 +1,14 @@
+{
+  "name": "ghost-atlas-map-of-reality",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Executable Ghost Atlas Map of Reality control plane and visualization surface.",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "verify": "node scripts/verify.mjs",
+    "receipt": "node scripts/generate-receipt.mjs"
+  }
+}

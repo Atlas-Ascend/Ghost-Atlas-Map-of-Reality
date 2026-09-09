@@ -1,0 +1,25 @@
+{
+  "receipt_id": "GA-MOR-SDLC-IMPLEMENTATION-001",
+  "campaign_id": "GA-MAP-OF-REALITY-CONVERGENCE-001",
+  "software_version": "0.1.0",
+  "generated_at": "2026-09-09T17:45:22.998Z",
+  "state": "IMPLEMENTATION_VERIFIED",
+  "truth_boundary": "This receipt proves model invariants and software implementation only. Physical EDEN, unattended resident execution, golden production sealing, and external commercial proof require separate evidence.",
+  "model_sha256": "b704bf2806bcbfb3f3f9bee1212f64bc206c1c54863850a40c699e6f93901c03",
+  "validation": {
+    "ok": true,
+    "duplicateIds": [],
+    "badEdges": [],
+    "badLayers": [],
+    "organMissing": [],
+    "counts": {"layers": 10,"nodes": 59,"edges": 78,"organs": 23}
+  },
+  "gates": {
+    "MODEL_INVARIANTS": "PASS",
+    "ORGAN_REGISTRY_23": "PASS",
+    "API_IMPLEMENTED": "PASS",
+    "UI_IMPLEMENTED": "PASS",
+    "PHYSICAL_EDEN": "NOT_CLAIMED",
+    "EXTERNAL_PROOF": "NOT_CLAIMED"
+  }
+}
