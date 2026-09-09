@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { VERSION, layers, nodes, edges, organRegistry23, wheel, campaign, validateModel, mapSnapshot } from './model.js';
 import { verifyGitHubActionsOidc } from './github-oidc.js';
 import { acceptPhysicalSnapshot, getLiveHistory, getLiveState } from './live-state.js';
+import { buildOrganismPacket } from './organism-packet.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.resolve(__dirname, '../public');
@@ -28,7 +29,7 @@ const readJsonBody = async req => {
 
 async function handle(req,res){
   const url = new URL(req.url,`http://${req.headers.host||'localhost'}`);
-  if(req.method==='GET'&&url.pathname==='/health'){const live=getLiveState();return json(res,200,{status:'ok',service:'ghost-atlas-map-of-reality',version:VERSION,validation:validateModel(),physical_evidence:{state:live.state,age_seconds:live.age_seconds},time:new Date().toISOString()});}
+  if(req.method==='GET'&&url.pathname==='/health'){const live=getLiveState();return json(res,200,{status:'ok',service:'ghost-atlas-map-of-reality',version:VERSION,validation:validateModel(),physical_evidence:{state:live.state,age_seconds:live.age_seconds},organism_packet:{contract:'GA-C2P-1',state:buildOrganismPacket(live).state},time:new Date().toISOString()});}
   if(req.method==='GET'&&url.pathname==='/api/v1/map') return json(res,200,mapSnapshot());
   if(req.method==='GET'&&url.pathname==='/api/v1/layers') return json(res,200,{layers});
   if(req.method==='GET'&&url.pathname==='/api/v1/nodes') return json(res,200,{nodes});
@@ -38,6 +39,7 @@ async function handle(req,res){
   if(req.method==='GET'&&url.pathname==='/api/v1/campaign') return json(res,200,campaign);
   if(req.method==='GET'&&url.pathname==='/api/v1/live') return json(res,200,getLiveState());
   if(req.method==='GET'&&url.pathname==='/api/v1/live/history') return json(res,200,getLiveHistory());
+  if(req.method==='GET'&&url.pathname==='/api/v1/organism/packet') return json(res,200,buildOrganismPacket(getLiveState()));
   if(req.method==='POST'&&url.pathname==='/api/v1/ingest/physical'){
     const auth=req.headers.authorization||'';
     if(!auth.startsWith('Bearer ')) return json(res,401,{error:'OIDC_BEARER_REQUIRED'});
@@ -47,9 +49,9 @@ async function handle(req,res){
   }
   if(req.method==='GET'&&url.pathname==='/api/v1/proof'){
     const live=getLiveState();
-    return json(res,200,{state:live.state==='FRESH_PROVEN'?'IMPLEMENTATION_PLUS_FRESH_PHYSICAL_EVIDENCE':'IMPLEMENTATION_PROOF',physical_evidence:live,truthBoundary:'Software invariants are local proof. Physical EDEN is promoted only from signed workflow evidence and expires into STALE; unattended-cycle and external-commercial gates remain separate.',validation:validateModel()});
+    return json(res,200,{state:live.state==='FRESH_PROVEN'?'IMPLEMENTATION_PLUS_FRESH_PHYSICAL_EVIDENCE':'IMPLEMENTATION_PROOF',physical_evidence:live,organism_packet:buildOrganismPacket(live),truthBoundary:'Software invariants are local proof. Physical EDEN is promoted only from signed workflow evidence and expires into STALE; sensory packets never self-promote.',validation:validateModel()});
   }
-  if(req.method==='GET'&&url.pathname==='/api/v1/openapi.json') return json(res,200,{openapi:'3.1.0',info:{title:'Ghost Atlas Map of Reality API',version:VERSION},paths:{'/health':{get:{summary:'Health, invariants and physical-evidence freshness'}},'/api/v1/map':{get:{summary:'Complete Map of Reality snapshot'}},'/api/v1/organs':{get:{summary:'Original 23-organ Vishvarupa registry'}},'/api/v1/wheel':{get:{summary:'Wheel of Reality control loop'}},'/api/v1/campaign':{get:{summary:'Convergence campaign state'}},'/api/v1/live':{get:{summary:'Latest sanitized physical-Estate evidence'}},'/api/v1/live/history':{get:{summary:'Ephemeral recent physical evidence history'}},'/api/v1/ingest/physical':{post:{summary:'GitHub-OIDC authenticated physical EDEN census ingest'}}}});
+  if(req.method==='GET'&&url.pathname==='/api/v1/openapi.json') return json(res,200,{openapi:'3.1.0',info:{title:'Ghost Atlas Map of Reality API',version:VERSION},paths:{'/health':{get:{summary:'Health, invariants and physical-evidence freshness'}},'/api/v1/map':{get:{summary:'Complete Map of Reality snapshot'}},'/api/v1/organs':{get:{summary:'Original 23-organ Vishvarupa registry'}},'/api/v1/wheel':{get:{summary:'Wheel of Reality control loop'}},'/api/v1/campaign':{get:{summary:'Convergence campaign state'}},'/api/v1/live':{get:{summary:'Latest sanitized physical-Estate evidence'}},'/api/v1/live/history':{get:{summary:'Ephemeral recent physical evidence history'}},'/api/v1/organism/packet':{get:{summary:'GA-C2P-1 sensory packet for Workforce Spine / Packet OS'}},'/api/v1/ingest/physical':{post:{summary:'GitHub-OIDC authenticated physical EDEN census ingest'}}}});
   if(req.method==='GET'&&sendStatic(res,url.pathname)) return;
   json(res,404,{error:'NOT_FOUND',path:url.pathname});
 }
