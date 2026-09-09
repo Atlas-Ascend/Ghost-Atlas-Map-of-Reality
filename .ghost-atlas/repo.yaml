@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "repo_id": "Atlas-Ascend/Ghost-Atlas-Map-of-Reality",
+  "estate_organ": "MAP_OF_REALITY",
+  "lifecycle": "active",
+  "canonical_branch": "main",
+  "authority": "observe",
+  "public_boundary": "public_sanitized",
+  "codex_access": "bounded_write",
+  "verification": {
+    "test": ["npm test"],
+    "build": ["npm run verify", "npm run receipt"]
+  },
+  "dependencies": [
+    "Atlas-Ascend/Eden-2.0",
+    "Atlas-Ascend/workforce-spine"
+  ],
+  "dependents": [
+    "Atlas-Ascend/workforce-spine"
+  ],
+  "capabilities": [
+    "canonical_reality_graph",
+    "physical_evidence_ingest",
+    "freshness_adjudication",
+    "ga_c2p_1_sensory_packet_emission",
+    "public_sanitized_observability"
+  ],
+  "promotion_gates": [
+    "github_oidc_attestation",
+    "public_allowlist_enforced",
+    "freshness_classified",
+    "ga_c2p_1_packet_valid",
+    "workflow_green"
+  ]
+}
