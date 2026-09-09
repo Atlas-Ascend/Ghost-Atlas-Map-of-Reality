@@ -1,0 +1,11 @@
+const map = await fetch('/api/v1/map').then(r=>r.json());
+const health = document.querySelector('#health'); health.textContent = map.validation.ok ? 'MODEL PASS' : 'MODEL FAIL';
+const stats = document.querySelector('#stats');
+for (const [label,value] of Object.entries({Layers:map.validation.counts.layers,Systems:map.validation.counts.nodes,Relations:map.validation.counts.edges,'Resident Organs':map.validation.counts.organs})) stats.insertAdjacentHTML('beforeend',`<div class="stat"><b>${value}</b><span>${label}</span></div>`);
+const layerSelect=document.querySelector('#layer'); map.layers.forEach(l=>layerSelect.insertAdjacentHTML('beforeend',`<option value="${l.id}">${l.name}</option>`));
+const search=document.querySelector('#search'); const layersEl=document.querySelector('#layers');
+function render(){const q=search.value.trim().toLowerCase(), selected=layerSelect.value; layersEl.innerHTML=''; for(const layer of map.layers){if(selected&&layer.id!==selected)continue; const ns=map.nodes.filter(n=>n.layer===layer.id && (!q || `${n.name} ${n.role} ${n.kind}`.toLowerCase().includes(q))); if(!ns.length)continue; const card=document.createElement('article'); card.className='layer-card'; card.innerHTML=`<div class="layer-head"><div><div class="eyebrow">LAYER ${String(layer.order).padStart(2,'0')}</div><h2>${layer.name}</h2><p>${layer.purpose}</p></div><span class="badge">${ns.length} nodes</span></div><div class="node-grid">${ns.map(n=>`<div class="node"><div class="kind">${n.kind}</div><h3>${n.name}</h3><p>${n.role}</p></div>`).join('')}</div>`; layersEl.append(card)}}
+search.addEventListener('input',render); layerSelect.addEventListener('change',render); render();
+document.querySelector('#wheel').innerHTML=map.wheel.map(w=>`<div class="wheel-step"><b>${w.indexLabel}. ${w.phase}</b><small>${w.systems.join('<br>')}</small></div>`).join('');
+document.querySelector('#organs-count').textContent=`${map.organRegistry23.length}/23`; document.querySelector('#organs').innerHTML=map.organRegistry23.map(o=>`<div class="organ"><strong>${String(o.organ).padStart(2,'0')}</strong>${o.name}</div>`).join('');
+document.querySelector('#campaign').innerHTML=map.campaign.packets.map(p=>`<div class="packet"><div class="state">${p.state}</div><b>${p.id}</b><div>${p.name}</div></div>`).join('');

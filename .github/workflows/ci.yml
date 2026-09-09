@@ -1,0 +1,26 @@
+name: Map of Reality SDLC Gate
+on:
+  push:
+    branches: [main, 'build/**']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run verify
+      - run: npm run receipt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ga-map-of-reality-proof
+          path: proof/GA-MOR-SDLC-IMPLEMENTATION-001.json
