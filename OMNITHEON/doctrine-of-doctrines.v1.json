@@ -1,0 +1,66 @@
+{
+  "schema": "ghost-atlas.omnitheon.doctrine-of-doctrines.v1",
+  "version": "1.0.0",
+  "status": "CANONICAL",
+  "scope": "estate-wide",
+  "prime_law": "No doctrine may grant itself root authority.",
+  "precedence": [
+    "HUMAN_AGENCY",
+    "BUILD_TRUTH",
+    "DOCTRINE_OF_DOCTRINES",
+    "OMNITHEON_CONSTITUTION",
+    "OFFICE_ORGAN_DOCTRINE",
+    "CASE_PACKET_POLICY",
+    "MODEL_TOOL_RUNTIME_INSTRUCTIONS"
+  ],
+  "claim_types": ["EMPIRICAL", "SYMBOLIC", "NORMATIVE", "HISTORICAL", "SPECULATIVE"],
+  "conflict_rules": {
+    "preserve_disagreement": true,
+    "require_scope_and_authority": true,
+    "empirical_disputes": "SECA_DEVOS",
+    "security_privacy_cultural_boundaries": "MEDUSA",
+    "missing_perspectives": "EMPTY_CHAIR",
+    "consequential_unresolved_conflicts": "JANUS_ODIN",
+    "preserve_minority_reports": true
+  },
+  "promotion_requirements": [
+    "known_identity_and_version",
+    "attributable_source_and_scope",
+    "bounded_authority",
+    "higher_order_doctrine_loaded",
+    "material_claim_types_explicit",
+    "verification_and_boundary_review_identified",
+    "janus_odin_authorization_when_required",
+    "proofgrid_receipt_possible"
+  ],
+  "anti_capture": [
+    "NO_RELIGION_ROOT_AUTHORITY",
+    "NO_IDEOLOGY_ROOT_AUTHORITY",
+    "NO_MODEL_ROOT_AUTHORITY",
+    "NO_AGENT_ROOT_AUTHORITY",
+    "NO_OFFICE_ROOT_AUTHORITY",
+    "NO_FOUNDER_PREFERENCE_AS_UNIVERSAL_TRUTH",
+    "NO_METRIC_AS_ABSOLUTE_AUTHORITY",
+    "NO_MAJORITY_VOTE_AS_PROOF_OF_TRUTH"
+  ],
+  "resident_requirements": [
+    "doctrine_stack_loaded",
+    "bounded_authority_known",
+    "human_intent_known",
+    "claim_types_known",
+    "evidence_and_provenance_known",
+    "higher_order_conflict_governor_known",
+    "council_requirement_known",
+    "janus_requirement_known",
+    "verification_requirement_known",
+    "medusa_classification_known",
+    "proof_receipt_class_known",
+    "thoth_return_known"
+  ],
+  "canonical_source": {
+    "repository": "Atlas-Ascend/Ghost-Atlas-Map-of-Reality",
+    "path": "OMNITHEON/doctrine-of-doctrines.v1.json",
+    "runtime_doctrine_endpoint": "https://ghost-atlas-map-of-reality.onrender.com/api/v1/omnitheon/doctrine"
+  },
+  "node_law": "Canonical repositories carry lightweight Doctrine Nodes that point to this source instead of duplicating sovereign doctrine."
+}
