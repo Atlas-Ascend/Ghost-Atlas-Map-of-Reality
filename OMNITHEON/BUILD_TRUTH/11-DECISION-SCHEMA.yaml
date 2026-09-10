@@ -1,0 +1,28 @@
+schema: omnitheon.deliberation.v1
+required:
+  - case_id
+  - tradition
+  - school_or_lineage
+  - question
+  - interpretation
+  - claim_types
+  - values_invoked
+  - points_of_agreement
+  - points_of_conflict
+  - uncertainties
+  - potential_harms
+  - minority_position
+  - source_provenance
+  - confidence
+claim_types:
+  - EMPIRICAL
+  - SYMBOLIC
+  - NORMATIVE
+  - HISTORICAL
+  - SPECULATIVE
+resolution_states:
+  - ADVISORY
+  - CONTESTED
+  - INCOMPLETE
+  - DEFERRED
+  - READY_FOR_JANUS
