@@ -1,0 +1,29 @@
+{
+  "schema": "ghost-atlas.omnitheon.platform-bindings.v1",
+  "version": "1.0.0",
+  "canonical_repo": "Atlas-Ascend/Ghost-Atlas-Map-of-Reality",
+  "doctrine_commit": "6d9c0e28a07b9d909b0992b205228b2adb4b11ab",
+  "render": {
+    "workspace_id": "tea-d8ghr467r5hc73b6jst0",
+    "service_id": "srv-dagpo7on74is739hltv0",
+    "service": "ghost-atlas-map-of-reality",
+    "base_url": "https://ghost-atlas-map-of-reality.onrender.com",
+    "doctrine_url": "https://ghost-atlas-map-of-reality.onrender.com/api/v1/omnitheon/doctrine",
+    "bootstrap_url": "https://ghost-atlas-map-of-reality.onrender.com/api/v1/omnitheon/bootstrap",
+    "worker_bindings": ["ghost-atlas-runtime-worker-core", "ghost-atlas-runtime-worker-custodian", "ghost-atlas-runtime-worker-factory", "ghost-atlas-runtime-worker-qualification"]
+  },
+  "neon": {
+    "project_id": "billowing-moon-84254590",
+    "project": "ghost-atlas-estate-registry",
+    "policy_table": "corporate_os.policies",
+    "policy_ids": ["OMNITHEON-RESIDENT-DOCTRINE-V1", "OMNITHEON-RESIDENT-STARTUP-V1"]
+  },
+  "vercel": {
+    "team_id": "team_DsWa4h5JsUMelhlqijg1wPx3",
+    "team": "Ghost Atlas",
+    "runtime_project_id": "prj_uv7Ctr76D4swlTE6ifkFAoPkoccM",
+    "runtime_project": "ghost-atlas-hq-runtime",
+    "role": "public/operator consumption surface",
+    "source_of_truth": "Render OMNITHEON doctrine API"
+  }
+}
