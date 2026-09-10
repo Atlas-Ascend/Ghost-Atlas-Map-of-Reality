@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ghost-atlas://omnitheon/resident-startup.schema.json",
+  "title": "Ghost Atlas Resident Startup Contract",
+  "type": "object",
+  "required": ["resident_id", "role", "bounded_authority", "human_intent_ref", "doctrine_version", "claim_types", "empty_chair_status", "janus_required", "verification_profile", "medusa_classification", "proof_receipt_class"],
+  "properties": {
+    "resident_id": {"type": "string", "minLength": 1},
+    "role": {"type": "string", "minLength": 1},
+    "bounded_authority": {"type": "array", "items": {"type": "string"}},
+    "human_intent_ref": {"type": "string", "minLength": 1},
+    "doctrine_version": {"const": "1.0.0"},
+    "claim_types": {"type": "array", "uniqueItems": true, "items": {"enum": ["EMPIRICAL", "SYMBOLIC", "NORMATIVE", "HISTORICAL", "SPECULATIVE"]}},
+    "provenance_refs": {"type": "array", "items": {"type": "string"}},
+    "minority_report_refs": {"type": "array", "items": {"type": "string"}},
+    "empty_chair_status": {"enum": ["NOT_REQUIRED", "PENDING", "COMPLETE", "MATERIAL_OMISSION"]},
+    "council_required": {"type": "boolean", "default": false},
+    "janus_required": {"type": "boolean"},
+    "janus_authorization_ref": {"type": ["string", "null"]},
+    "verification_profile": {"type": "string", "minLength": 1},
+    "medusa_classification": {"enum": ["PUBLIC", "INTERNAL", "PRIVATE", "SACRED_RESTRICTED", "CONTESTED"]},
+    "proof_receipt_class": {"type": "string", "minLength": 1},
+    "continuity_tags": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}
