@@ -1,6 +1,28 @@
 import { createHash } from 'node:crypto';
 
-const TARGET_SYSTEMS = ['workforce-spine','Packet-OS','JANUS','Thoth','Universal-Atlas'];
+const TARGET_SYSTEMS = [
+  'workforce-spine',
+  'Packet-OS',
+  'JANUS',
+  'Atlas-Mind',
+  'SECA/DevOS',
+  'ProofGrid',
+  'Thoth',
+  'SESHAT',
+  'Universal-Atlas'
+];
+
+const WHEEL_ROUTE = [
+  { phase:'OBSERVER', systems:['Ghost-Atlas-Map-of-Reality'] },
+  { phase:'PERMISSION', systems:['Medusa','JANUS'] },
+  { phase:'INTENTION', systems:['JANUS'] },
+  { phase:'IMAGINATION', systems:['Atlas-Mind'] },
+  { phase:'ACTION', systems:['Packet-OS','workforce-spine'] },
+  { phase:'FEEDBACK', systems:['Ghost-Atlas-Map-of-Reality'] },
+  { phase:'PROOF', systems:['SECA/DevOS','ProofGrid'] },
+  { phase:'INTEGRATION', systems:['Thoth','SESHAT','Universal-Atlas'] },
+  { phase:'RETURN', systems:['Atlas-Mind'] }
+];
 
 export function buildOrganismPacket(live, now=Date.now()) {
   const receiptId = live?.latest?.receipt_id || null;
@@ -17,7 +39,8 @@ export function buildOrganismPacket(live, now=Date.now()) {
     state: live?.state === 'FRESH_PROVEN' ? 'READY' : 'OBSERVATION_ONLY',
     artifact_refs: [
       {kind:'api',ref:'/api/v1/live'},
-      {kind:'api',ref:'/api/v1/map'}
+      {kind:'api',ref:'/api/v1/map'},
+      {kind:'api',ref:'/api/v1/wheel'}
     ],
     proof_refs: receiptId ? [{kind:'physical_evidence_receipt',ref:receiptId}] : [],
     timestamps: {
@@ -29,10 +52,16 @@ export function buildOrganismPacket(live, now=Date.now()) {
       producer: 'Ghost-Atlas-Map-of-Reality',
       consumer: 'workforce-spine',
       next_authority: 'Packet-OS',
+      command: 'JANUS',
+      cognition: 'Atlas-Mind',
       verification: 'SECA/DevOS',
+      proof: 'ProofGrid',
       memory: 'Thoth',
-      command: 'JANUS'
+      temporal_index: 'SESHAT',
+      reality_map: 'Universal-Atlas',
+      return_context: 'Atlas-Mind'
     },
+    wheel_route: WHEEL_ROUTE,
     observation: {
       physical_state: live?.state || 'UNSEEN',
       freshness: live?.freshness || 'NO_PHYSICAL_SNAPSHOT',
@@ -41,6 +70,6 @@ export function buildOrganismPacket(live, now=Date.now()) {
       gates: live?.latest?.gates || {},
       metrics: live?.latest?.metrics || {}
     },
-    promotion_law: 'This packet is sensory input only. Workforce Spine and Packet OS own routing; SECA/DevOS owns verification; no packet self-promotes.'
+    promotion_law: 'This packet is sensory input only. Workforce Spine and Packet OS own routing; JANUS/Medusa govern permission; SECA/DevOS verifies; ProofGrid receipts; Thoth/SESHAT/Universal Atlas integrate; Atlas Mind receives the returned result. No packet self-promotes.'
   };
 }
