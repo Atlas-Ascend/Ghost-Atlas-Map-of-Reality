@@ -1,0 +1,35 @@
+{
+  "contract": "GA-ESTATE-ARCHAEOLOGY-1.0",
+  "as_of": "2026-09-12",
+  "authority": "2026-09-10 frozen Ghost Atlas / EDEN AGI organism map",
+  "source": {
+    "artifact": "Ghost_Atlas_EDEN_Estate_Archaeology_Index_2026-09-12.xlsx",
+    "sha256": "7c031c4829c4a17688c6519b5a6be5933959020aa852ae641f763bbe9d0ff10a"
+  },
+  "scope": {
+    "accessible_repositories": 81,
+    "render_services": 24,
+    "neon_projects": 5,
+    "library_workspaces": 5,
+    "named_system_index_rows": 133,
+    "metaforge_backlog_records": 130,
+    "reconciliation_candidates": 20
+  },
+  "routing": {
+    "registry": "Estate Service Catalog & Capability Registry",
+    "execution": "estate.reconcile via Execution Fabric",
+    "packets": "Packet OS",
+    "dispatch": "Workforce Spine",
+    "qualification": "SECA / DevOS",
+    "proof": "ProofGrid",
+    "archive": "THOTH"
+  },
+  "p0": [
+    {"id":"GA-ARCH-001","owner":"Execution Fabric","state":"PARTIAL_OR_UNBOUND","proof":"hosted execution plus resident source proof"},
+    {"id":"GA-ARCH-002","owner":"EDEN","state":"PARTIAL_OR_UNBOUND","proof":"durable ledger plus authenticated runtime acceptance"},
+    {"id":"GA-ARCH-003","owner":"Office Fabric","state":"PARTIAL_OR_UNBOUND","proof":"publication dispatch qualification proof plus archive acknowledgement"},
+    {"id":"GA-ARCH-004","owner":"Atlas Mind","state":"PARTIAL_OR_UNBOUND","proof":"five first-chat scenarios on intended storage"}
+  ],
+  "law": "No replacement builds. Reconcile -> absorb verified deltas -> bind -> verify -> prove -> archive.",
+  "truth_boundary": "This is accessible-corpus archaeology. Repository or artifact existence is evidence, not proof of runtime incorporation."
+}
