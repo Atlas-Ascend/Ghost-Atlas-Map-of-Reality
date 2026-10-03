@@ -1,0 +1,187 @@
+{
+  "schema": "ghost-atlas.omnitheon.tri-mode-os.v1",
+  "version": "1.0.0",
+  "status": "CANONICAL_EXTENSION",
+  "scope": "estate-wide",
+  "canonical_owner": {
+    "repository": "Atlas-Ascend/Ghost-Atlas-Map-of-Reality",
+    "path": "OMNITHEON/tri-mode-os.v1.json"
+  },
+  "purpose": "Bind Ghost Atlas authority state to the three execution lanes without creating a replacement control plane.",
+  "prime_law": "AUTHORITY_MODE and EXECUTION_LANE are orthogonal. A lane never grants authority and a mode never proves execution.",
+  "authority_modes": {
+    "OBSERVER": {
+      "question": "What is actually here?",
+      "may": [
+        "read",
+        "inspect",
+        "measure",
+        "compare",
+        "diagnose",
+        "collect_non_mutating_telemetry"
+      ],
+      "may_not": [
+        "mutate_canonical_state",
+        "promote",
+        "deploy",
+        "authorize_consequential_change"
+      ]
+    },
+    "ARCHITECT": {
+      "question": "What should change, through which existing owners, and under what proof contract?",
+      "may": [
+        "model",
+        "plan",
+        "simulate",
+        "route_candidate_work",
+        "define_acceptance",
+        "prepare_packet_graph"
+      ],
+      "may_not": [
+        "self_authorize_consequential_mutation",
+        "claim_unverified_completion",
+        "bypass_canonical_owner"
+      ]
+    },
+    "CREATOR": {
+      "question": "What authorized transformation may now be committed?",
+      "may": [
+        "execute_authorized_packets",
+        "commit",
+        "deploy",
+        "promote",
+        "write_back_verified_state"
+      ],
+      "requires": [
+        "JANUS_ODIN_AUTHORIZATION_WHEN_CONSEQUENTIAL",
+        "MEDUSA_BOUNDARY_WHEN_APPLICABLE",
+        "SECA_DEVOS_VERIFICATION_PROFILE",
+        "PROOFGRID_RECEIPT_PLAN"
+      ],
+      "may_not": [
+        "expand_scope_without_new_authority",
+        "promote_without_required_proof"
+      ]
+    }
+  },
+  "execution_lanes": {
+    "LOCAL": {
+      "canonical_surfaces": [
+        "EDEN",
+        "VISHVARUPA",
+        "HYPERNET",
+        "ODIN",
+        "JANUS_PHONE",
+        "TERMUX",
+        "LOCAL_MODELS"
+      ],
+      "proof_minimum": [
+        "target_identity",
+        "execution_or_health_receipt",
+        "correlation_id",
+        "observed_at"
+      ]
+    },
+    "CLOUD": {
+      "canonical_surfaces": [
+        "GITHUB",
+        "RENDER",
+        "NEON",
+        "VERCEL",
+        "CLOUD_RUNTIME",
+        "CI"
+      ],
+      "proof_minimum": [
+        "source_or_runtime_identity",
+        "execution_or_deployment_receipt",
+        "correlation_id",
+        "observed_at"
+      ]
+    },
+    "WEBSITES": {
+      "canonical_surfaces": [
+        "PUBLIC_SITES",
+        "OFFICE_SITES",
+        "COMMAND_CENTER",
+        "GARI_PUBLIC_SURFACE",
+        "CLIENT_SURFACES"
+      ],
+      "proof_minimum": [
+        "url_or_surface_identity",
+        "http_or_browser_receipt",
+        "correlation_id",
+        "observed_at"
+      ]
+    }
+  },
+  "estate_default": {
+    "operational_build_and_release_missions": {
+      "requested_lanes": [
+        "LOCAL",
+        "CLOUD",
+        "WEBSITES"
+      ],
+      "exceptions_require": [
+        "explicit_scope_reason",
+        "recorded_missing_lane_state"
+      ]
+    },
+    "observation_only_missions": {
+      "requested_lanes": [
+        "LOCAL",
+        "CLOUD",
+        "WEBSITES"
+      ],
+      "authority_mode": "OBSERVER"
+    }
+  },
+  "mission_envelope_required": [
+    "correlation_id",
+    "intent_ref",
+    "authority_mode",
+    "requested_lanes",
+    "canonical_owner",
+    "constraints",
+    "acceptance",
+    "proof_plan"
+  ],
+  "transition_law": [
+    "OBSERVER_TO_ARCHITECT_REQUIRES_EXPLICIT_INTENT",
+    "ARCHITECT_TO_CREATOR_REQUIRES_AUTHORITY_FOR_CONSEQUENTIAL_MUTATION",
+    "CREATOR_TO_PROMOTED_REQUIRES_PROOF",
+    "FAILED_OR_UNPROVEN_LANE_RETURNS_TO_ARCHITECT_WITHOUT_FALSE_FINISH"
+  ],
+  "organ_bindings": {
+    "ATLAS_MIND": "normalize intent and expose mode/lane state",
+    "JANUS_ODIN": "authorize consequential transition and lane exceptions",
+    "PACKET_OS": "carry correlation, authority mode, lanes, acceptance and proof refs",
+    "WORKFORCE_SPINE": "schedule existing workers per requested lane",
+    "CROWNGRID": "resolve capabilities and routes per lane",
+    "EDEN_VISHVARUPA_HYPERNET": "execute and observe local/runtime lane",
+    "GITHUB_RENDER_NEON_VERCEL": "execute and observe cloud lane",
+    "COMMAND_CENTER_OFFICES_PUBLIC_SURFACES": "execute and observe website lane",
+    "METAFORGE_GARI": "realize bounded build/research work without taking authority ownership",
+    "MEDUSA": "enforce security/privacy/public-private boundaries",
+    "SECA_DEVOS": "verify implementation and finish truth",
+    "PROOFGRID": "store lane-correlated receipts",
+    "THOTH": "preserve mission lineage, state and return context",
+    "SERVERFORGE_ROADBRIDGE": "externalize approved nervous-system and field I/O events"
+  },
+  "closure_rule": {
+    "all_requested_lanes_must_have_terminal_state": true,
+    "terminal_states": [
+      "PASS",
+      "FAIL",
+      "BLOCKED",
+      "DEGRADED",
+      "NOT_APPLICABLE_WITH_AUTHORIZED_REASON"
+    ],
+    "finished_requires": [
+      "all_required_lane_receipts",
+      "verification_verdict",
+      "proofgrid_receipt_or_explicit_blocker",
+      "thoth_return"
+    ],
+    "false_finish_forbidden": true
+  }
+}
