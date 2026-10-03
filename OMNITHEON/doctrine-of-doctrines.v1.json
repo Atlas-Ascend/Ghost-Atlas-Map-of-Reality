@@ -13,7 +13,13 @@
     "CASE_PACKET_POLICY",
     "MODEL_TOOL_RUNTIME_INSTRUCTIONS"
   ],
-  "claim_types": ["EMPIRICAL", "SYMBOLIC", "NORMATIVE", "HISTORICAL", "SPECULATIVE"],
+  "claim_types": [
+    "EMPIRICAL",
+    "SYMBOLIC",
+    "NORMATIVE",
+    "HISTORICAL",
+    "SPECULATIVE"
+  ],
   "conflict_rules": {
     "preserve_disagreement": true,
     "require_scope_and_authority": true,
@@ -55,12 +61,24 @@
     "verification_requirement_known",
     "medusa_classification_known",
     "proof_receipt_class_known",
-    "thoth_return_known"
+    "thoth_return_known",
+    "tri_mode_authority_known",
+    "requested_execution_lanes_known",
+    "lane_receipt_requirements_known"
   ],
   "canonical_source": {
     "repository": "Atlas-Ascend/Ghost-Atlas-Map-of-Reality",
     "path": "OMNITHEON/doctrine-of-doctrines.v1.json",
     "runtime_doctrine_endpoint": "https://ghost-atlas-map-of-reality.onrender.com/api/v1/omnitheon/doctrine"
   },
-  "node_law": "Canonical repositories carry lightweight Doctrine Nodes that point to this source instead of duplicating sovereign doctrine."
+  "node_law": "Canonical repositories carry lightweight Doctrine Nodes that point to this source instead of duplicating sovereign doctrine.",
+  "extensions": {
+    "tri_mode_os": {
+      "schema": "ghost-atlas.omnitheon.tri-mode-os.v1",
+      "version": "1.0.0",
+      "path": "OMNITHEON/tri-mode-os.v1.json",
+      "status": "CANONICAL_EXTENSION",
+      "required_for": "resident consequential execution and estate three-lane convergence"
+    }
+  }
 }
