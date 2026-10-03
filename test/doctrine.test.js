@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { getResidentDoctrine, getDoctrineOfDoctrines, buildResidentBootstrap } from '../src/doctrine.js';
+import { getResidentDoctrine, getDoctrineOfDoctrines, getTriModeOs, buildResidentBootstrap } from '../src/doctrine.js';
 
 test('resident doctrine loads as active v1', () => {
   const doctrine = getResidentDoctrine();
@@ -36,4 +36,22 @@ test('resident bootstrap fails closed on authority promotion and loads the compl
   assert.equal(bootstrap.invariants.consequential_action_without_janus, 'DENIED');
   assert.equal(bootstrap.invariants.empirical_promotion_without_verification, 'DENIED');
   assert.equal(bootstrap.invariants.untyped_claims, 'DENIED');
+});
+
+
+test('Tri-Mode OS binds authority modes to the three execution lanes without conflating them', () => {
+  const tri = getTriModeOs();
+  assert.equal(tri.status, 'CANONICAL_EXTENSION');
+  assert.deepEqual(Object.keys(tri.authority_modes), ['OBSERVER', 'ARCHITECT', 'CREATOR']);
+  assert.deepEqual(Object.keys(tri.execution_lanes), ['LOCAL', 'CLOUD', 'WEBSITES']);
+  assert.deepEqual(tri.estate_default.operational_build_and_release_missions.requested_lanes, ['LOCAL', 'CLOUD', 'WEBSITES']);
+  assert.equal(tri.closure_rule.false_finish_forbidden, true);
+});
+
+test('resident bootstrap exposes Tri-Mode OS convergence contract', () => {
+  const bootstrap = buildResidentBootstrap({resident_id:'TEST-TRIMODE', role:'operator', human_intent_ref:'MISSION-001'});
+  assert.equal(bootstrap.tri_mode_os_version, '1.0.0');
+  assert.deepEqual(bootstrap.tri_mode_os.authority_modes, ['OBSERVER', 'ARCHITECT', 'CREATOR']);
+  assert.deepEqual(bootstrap.tri_mode_os.execution_lanes, ['LOCAL', 'CLOUD', 'WEBSITES']);
+  assert.equal(bootstrap.tri_mode_os.closure_rule.false_finish_forbidden, true);
 });
