@@ -1,0 +1,88 @@
+{
+  "receipt_id": "GA-TRI-MODE-OS-CONVERGENCE-001",
+  "recorded_at": "2026-10-03",
+  "state": "PASS_WITH_LIVE_PROMOTION_BOUNDARY",
+  "command": "Connect the Ghost Atlas / EDEN organism with Tri-Mode OS",
+  "canonical_contract": {
+    "repository": "Atlas-Ascend/Ghost-Atlas-Map-of-Reality",
+    "path": "OMNITHEON/tri-mode-os.v1.json",
+    "schema": "ghost-atlas.omnitheon.tri-mode-os.v1",
+    "version": "1.0.0"
+  },
+  "topology": {
+    "authority_axis": [
+      "OBSERVER",
+      "ARCHITECT",
+      "CREATOR"
+    ],
+    "execution_axis": [
+      "LOCAL",
+      "CLOUD",
+      "WEBSITES"
+    ],
+    "rule": "authority and execution lane are orthogonal"
+  },
+  "doctrine_fabric": {
+    "planted_repo_coverage": "81/81 at prior global resolution",
+    "mechanism": ".ghost-atlas/DOCTRINE_NODE.yaml points to canonical Doctrine of Doctrines",
+    "meta_doctrine_extension_registered": true,
+    "resident_bootstrap_loads_tri_mode_os": true,
+    "runtime_endpoint": "/api/v1/omnitheon/tri-mode-os"
+  },
+  "command_center": {
+    "repository": "Atlas-Ascend/Ghost-Atlas-Command-Center",
+    "estate_api_exposes_tri_mode_os": true,
+    "command_api_carries_requested_authority_mode": true,
+    "command_api_defaults_requested_lanes": [
+      "LOCAL",
+      "CLOUD",
+      "WEBSITES"
+    ],
+    "termux_three_lane_proof_bound_to_contract": true,
+    "proof_gate": "PASS"
+  },
+  "organism_bindings": {
+    "Atlas Mind": "intent normalization and mode/lane visibility",
+    "JANUS/ODIN": "consequential transition authority",
+    "Packet OS": "correlation + mode + lane + acceptance + proof carriage",
+    "Workforce Spine": "lane-aware scheduling",
+    "CrownGrid": "capability/route resolution",
+    "EDEN/VISHVARUPA/HYPERNET": "local/runtime execution",
+    "GitHub/Render/Neon/Vercel": "cloud execution",
+    "Command Center/Offices/Public surfaces": "website execution",
+    "MetaForge/GARI": "bounded realization/research",
+    "Medusa": "boundary review",
+    "SECA/DevOS": "verification and finish truth",
+    "ProofGrid": "lane-correlated receipts",
+    "Thoth": "lineage and return",
+    "ServerForge/RoadBridge": "approved nervous-system and field I/O"
+  },
+  "source_commits": {
+    "tri_mode_contract": "a24aa74bf64d89b17905235781b5ecd325f6c955",
+    "doctrine_registration": "892089121e96b3202126e392690f68d63c30c318",
+    "resident_loader": "60d691d00496dcbdac7383675fb609cfe7b37147",
+    "doctrine_tests": "499b1c1dd96d292367f83afbeb5f6e515dd152eb",
+    "runtime_endpoint": "207c3b98994cdb8f29b023df66df1064f7da158d",
+    "runtime_endpoint_test": "ce5f8c8e4800b0b494f002f2d67a67ad7c470e51",
+    "command_center_projection": "7aa870c471737af56bfd5216151982f0367e0bca",
+    "estate_api": "1e926471d086ec8e6a0de39a81da6f5a915643c3",
+    "command_envelope": "9ff75017dc0cc7a3d81323cc41418b48c565113b",
+    "termux_proof": "06f5fa7a70407d249bc7d19b2d7b130065f701a5"
+  },
+  "verification": {
+    "map_of_reality_sdlc_gate": {
+      "run_id": 37153129152,
+      "conclusion": "success"
+    },
+    "command_center_proof_gate": {
+      "run_id": 37153092638,
+      "conclusion": "success"
+    }
+  },
+  "closure_law": "No mission is FINISHED until all requested lanes have terminal state, verification is recorded, ProofGrid receipt or explicit blocker exists, and Thoth return is available.",
+  "live_boundaries": [
+    "No fresh physical Termux/EDEN execution receipt was observed by this cloud-side convergence pass.",
+    "The latest Command Center source state has not been independently correlated to a new Vercel production deployment in this pass.",
+    "Doctrine-fabric membership proves machine-discoverable inheritance; each runtime still must demonstrate enforcement when it performs consequential work."
+  ]
+}
