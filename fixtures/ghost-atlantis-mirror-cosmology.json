@@ -1,0 +1,62 @@
+{
+  "id": "GHOST-ATLANTIS-MIRROR-COSMOLOGY",
+  "kind": "fictional_symbolic_world_model",
+  "canonical_baseline": "2026-09-10",
+  "principles": [
+    "as_above_so_below",
+    "as_within_so_without"
+  ],
+  "realms": [
+    {
+      "id": "earth",
+      "label": "Earth / Underworld",
+      "roles": [
+        "material_reality",
+        "challenge",
+        "shadow",
+        "causal_consequence"
+      ],
+      "actual_world_claim": false
+    },
+    {
+      "id": "ghost_atlantis",
+      "label": "Ghost Atlantis / EDEN",
+      "roles": [
+        "heaven_archetype",
+        "restoration",
+        "integration",
+        "ideal_civilization"
+      ],
+      "actual_world_claim": false
+    }
+  ],
+  "relations": [
+    {
+      "from": "earth",
+      "to": "ghost_atlantis",
+      "type": "hermetic_mirror",
+      "mapping": "observed_condition_to_idealized_counterpart"
+    },
+    {
+      "from": "ghost_atlantis",
+      "to": "earth",
+      "type": "as_within_so_without",
+      "mapping": "design_to_measurable_authorized_real_world_action"
+    }
+  ],
+  "governance": {
+    "source_truth": "evidence_and_provenance",
+    "symbolic_truth": "narrative_interpretation",
+    "external_actions": "authorization_required",
+    "real_people": "no_inferred_moral_classification_or_forced_payments"
+  },
+  "integration": {
+    "ontology": "Ghost Atlas Map of Reality",
+    "reasoning": "Atlas Mind / NAVI",
+    "memory": "Thoth",
+    "authority": "Janus / Odin",
+    "security": "Medusa",
+    "execution": "Packet OS / Workforce Spine / MetaForge",
+    "proof": "SECA / DevOS / ProofGrid"
+  }
+}
