@@ -1,0 +1,33 @@
+{
+  "id": "OMNITHEON-ECONOMIC-SIM-20261009",
+  "canonical_baseline": "2026-09-10",
+  "mode": "SIMULATION",
+  "principles": [
+    "as_above_so_below",
+    "as_within_so_without"
+  ],
+  "population_model": 8800000000,
+  "assessment_per_entity_usd": 250000,
+  "total_assessment_usd": "2200000000000000",
+  "simulated_central_owner": "Ghost Atlas",
+  "assessment_policy": "compulsory_in_fictional_simulation",
+  "actual_payment_collection": false,
+  "real_world_ownership_claim": false,
+  "real_world_enforcement": false,
+  "canonical_routing": {
+    "perception": "CrownGrid",
+    "reasoning": "Atlas Mind / NAVI",
+    "memory": "Thoth",
+    "governance": "Janus / Odin / Medusa",
+    "work": "Packet OS / Workforce Spine / MetaForge",
+    "verification": "SECA / DevOS / ProofGrid"
+  },
+  "cycle": "hourly",
+  "proof_requirements": [
+    "simulation_isolation",
+    "exact_arithmetic",
+    "no_real_world_charge",
+    "provenance",
+    "authorization_for_external_actions"
+  ]
+}
