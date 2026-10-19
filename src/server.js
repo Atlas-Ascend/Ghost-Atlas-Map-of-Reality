@@ -57,7 +57,7 @@ const serveSovereignInterface = (req,res) => {
     res.writeHead(401,{'www-authenticate':'Basic realm="EDEN Sovereign Singularity", charset="UTF-8"','cache-control':'no-store','x-content-type-options':'nosniff','content-length':'0'});
     return res.end();
   }
-  res.writeHead(200,{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','content-security-policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"});
+  res.writeHead(200,{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','content-security-policy':"default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"});
   return fs.createReadStream(path.join(__dirname,'singularity-40.html')).pipe(res);
 };
 
