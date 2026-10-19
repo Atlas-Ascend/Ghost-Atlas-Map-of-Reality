@@ -1,6 +1,7 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+import { scryptSync, timingSafeEqual } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { VERSION, layers, nodes, edges, organRegistry23, wheel, campaign, validateModel, mapSnapshot } from './model.js';
 import { verifyGitHubActionsOidc } from './github-oidc.js';
@@ -28,8 +29,40 @@ const readJsonBody = async req => {
   try{return JSON.parse(Buffer.concat(chunks).toString('utf8'));}catch{throw new Error('INVALID_JSON');}
 };
 
+const singularityAuthorized = (req) => {
+  const stored = process.env.EDEN_SINGULARITY_SCRYPT_HASH || '';
+  const [algorithm, n, r, p, saltHex, digestHex] = stored.split(':');
+  if (algorithm !== 'scrypt' || !saltHex || !digestHex) return false;
+  const authorization = req.headers.authorization || '';
+  if (!authorization.startsWith('Basic ')) return false;
+  try {
+    const decoded = Buffer.from(authorization.slice(6), 'base64').toString('utf8');
+    const pos = decoded.indexOf(':');
+    if (pos < 1) return false;
+    const name = decoded.slice(0,pos);
+    const password = decoded.slice(pos+1);
+    if (name !== (process.env.EDEN_SINGULARITY_USER || 'architect')) return false;
+    const expected = Buffer.from(digestHex, 'hex');
+    if (expected.length !== 32) return false;
+    const calculated = scryptSync(password,Buffer.from(saltHex,'hex'),32,{N:Number(n),r:Number(r),p:Number(p)});
+    return timingSafeEqual(calculated,expected);
+  } catch { return false; }
+};
+const serveSovereignInterface = (req,res) => {
+  if (!(process.env.EDEN_SINGULARITY_SCRYPT_HASH||'').startsWith('scrypt:')) {
+    return json(res,503,{error:'OPERATOR_AUTH_NOT_CONFIGURED'});
+  }
+  if (!singularityAuthorized(req)) {
+    res.writeHead(401,{'www-authenticate':'Basic realm="EDEN Sovereign Singularity", charset="UTF-8"','cache-control':'no-store','x-content-type-options':'nosniff','content-length':'0'});
+    return res.end();
+  }
+  res.writeHead(200,{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','content-security-policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"});
+  return fs.createReadStream(path.join(__dirname,'singularity-40.html')).pipe(res);
+};
+
 async function handle(req,res){
   const url = new URL(req.url,`http://${req.headers.host||'localhost'}`);
+  if(req.method==='GET'&&(url.pathname==='/singularity'||url.pathname==='/singularity-40')) return serveSovereignInterface(req,res);
   if(req.method==='GET'&&url.pathname==='/health'){const live=getLiveState();const meta=getDoctrineOfDoctrines();return json(res,200,{status:'ok',service:'ghost-atlas-map-of-reality',version:VERSION,validation:validateModel(),doctrine:{version:getResidentDoctrine().version,status:'ACTIVE'},meta_doctrine:{version:meta.version,status:meta.status},tri_mode_os:{version:getTriModeOs().version,status:getTriModeOs().status},physical_evidence:{state:live.state,age_seconds:live.age_seconds},organism_packet:{contract:'GA-C2P-1',state:buildOrganismPacket(live).state},time:new Date().toISOString()});}
   if(req.method==='GET'&&url.pathname==='/api/v1/map') return json(res,200,mapSnapshot());
   if(req.method==='GET'&&url.pathname==='/api/v1/layers') return json(res,200,{layers});
