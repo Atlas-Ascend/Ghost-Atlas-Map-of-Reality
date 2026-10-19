@@ -64,6 +64,16 @@ const serveSovereignInterface = (req,res) => {
 async function handle(req,res){
   const url = new URL(req.url,`http://${req.headers.host||'localhost'}`);
   if(req.method==='GET'&&(url.pathname==='/singularity'||url.pathname==='/singularity-40')) return serveSovereignInterface(req,res);
+  if(req.method==='POST'&&url.pathname==='/api/v1/singularity/cycle'){
+    if(!singularityAuthorized(req)) return json(res,401,{error:'OPERATOR_AUTH_REQUIRED'});
+    const origin=req.headers.origin;
+    if(origin){
+      try { if(new URL(origin).host!==req.headers.host || new URL(origin).protocol!=='https:') return json(res,403,{error:'SAME_ORIGIN_REQUIRED'}); }
+      catch { return json(res,403,{error:'SAME_ORIGIN_REQUIRED'}); }
+    }
+    if((req.headers['content-type']||'').split(';')[0]!=='application/json') return json(res,415,{error:'JSON_REQUEST_REQUIRED'});
+    return json(res,200,await runSingularityCycle('operator'));
+  }
   if(req.method==='GET'&&url.pathname==='/api/v1/singularity/cycle'){
     if(!singularityAuthorized(req)) return json(res,401,{error:'OPERATOR_AUTH_REQUIRED'});
     return json(res,200,getSingularityCycleState());
