@@ -1,0 +1,589 @@
+{
+  "schema": "GA-SOVEREIGN-RECLAMATION-001",
+  "mode": "QUARANTINE_ONLY",
+  "canonical_owner": "Eden-2.0",
+  "operator": {
+    "display_name": "Raymond Cameron",
+    "role": "sole_human_operator",
+    "identity_verified": false,
+    "control_model": "ONE_MIND_ALL_OWNED_REPOS_ALL_OWNED_AGENTS",
+    "exclusive_control": true,
+    "delegation_enabled": false,
+    "delegation_requires_new_explicit_authorization": true,
+    "human_administrators_allowed": 1,
+    "agent_execution_default": "DENY",
+    "decree": "All owned Ghost Atlas repositories, services, nodes and agents are components of one EDEN organism under the sole operator Raymond Cameron / Ghost Atlas. No independently governing agent or repository.",
+    "unified_scope": [
+      "all owned repositories",
+      "all owned agents and daemons",
+      "all owned services and runtimes",
+      "all owned Hypernet nodes",
+      "all existing canonical organs"
+    ],
+    "thought_to_action": "expressed operator intent -> authenticated command capture -> unified planning and routing across all owned repositories and agents -> scoped execution when authorized -> verified results -> Thoth memory",
+    "thought_capture": "Only explicit user-provided commands and configured, consented input devices; no claim of unspoken thought access",
+    "agent_coordination": "ALL_AGENTS_ONE_COORDINATED_MIND",
+    "repo_governance": "ALL_REPOS_ONE_CANONICAL_ORGANISM",
+    "no_competing_executive_authority": true,
+    "execution_requires_authenticated_command": true
+  },
+  "activation": {
+    "enabled": false,
+    "reason": "Render public services, physical HYPERNET, and provider identity controls not verified isolated",
+    "requires": [
+      "operator MFA/passkey proof",
+      "provider RBAC audit",
+      "Render suspension",
+      "local node isolation",
+      "secret rotation",
+      "Medusa and SECA independent approval"
+    ]
+  },
+  "governance": {
+    "thoth": "evidence provenance",
+    "maat": "rule-based review",
+    "michael": "symbolic final review stage",
+    "navi": "quarantine monitoring",
+    "veritas": "independent verification",
+    "lucifers_landlord": "security policy alias",
+    "janus_odin": "operator authorization gateway"
+  },
+  "records": {
+    "scope": "owned software agents, fictional characters, and synthetic test cohorts only",
+    "synthetic_population_reference": 8800000000,
+    "real_people_classification": false,
+    "real_person_judgment": false,
+    "individual_repository_creation": false
+  },
+  "realms": [
+    {
+      "id": 1,
+      "name": "Intake",
+      "gate": "unreviewed"
+    },
+    {
+      "id": 2,
+      "name": "Identity",
+      "gate": "identity unresolved"
+    },
+    {
+      "id": 3,
+      "name": "Evidence",
+      "gate": "provenance incomplete"
+    },
+    {
+      "id": 4,
+      "name": "Authority",
+      "gate": "permissions mismatch"
+    },
+    {
+      "id": 5,
+      "name": "Behavior",
+      "gate": "policy violation suspected"
+    },
+    {
+      "id": 6,
+      "name": "Dependency",
+      "gate": "unsafe execution dependencies"
+    },
+    {
+      "id": 7,
+      "name": "Containment",
+      "gate": "verified harmful automation"
+    },
+    {
+      "id": 8,
+      "name": "Remediation",
+      "gate": "repair and tests pending"
+    },
+    {
+      "id": 9,
+      "name": "Review",
+      "gate": "eligible for operator decision"
+    }
+  ],
+  "security": {
+    "default_deny": true,
+    "execute_permissions": "none",
+    "network_permissions": "none",
+    "credential_access": "none",
+    "write_permissions": "none",
+    "quarantine": "immutable evidence plus isolated review",
+    "encryption": "must be configured and attested, not assumed",
+    "operator_approval_required": true
+  },
+  "proof": {
+    "classification_requires": "artifact hashes, logs, exact owner and reversible disposition",
+    "reentry": "explicit operator decision plus Medusa/SECA verification"
+  },
+  "reconstruction": {
+    "mode": "IN_PLACE_CONVERGENCE",
+    "state": "QUARANTINE_NO_REACTIVATION",
+    "operator_identity": "Raymond Cameron",
+    "phases": [
+      "AMMIT",
+      "ATTEST",
+      "CLEANSE",
+      "SOVEREIGNIZE",
+      "RECONSTITUTE",
+      "REINTEGRATE",
+      "PROVE"
+    ],
+    "gates": [
+      "Render isolation receipt",
+      "physical HYPERNET node inventory and isolation receipt",
+      "verified provider ownership, MFA and permissions audit",
+      "credential rotation and encryption evidence",
+      "agent inventory and quarantine verification",
+      "Medusa and SECA independent verification",
+      "explicit operator activation"
+    ],
+    "no_new_repositories": true,
+    "administration": "SINGLE_OPERATOR_ONE_MIND_GLOBAL_OWNED_ESTATE",
+    "distributed_administration": false,
+    "coordination": "Every owned repository and agent is a subordinate capability of unified command, using existing integration routes, no replacement systems",
+    "runtime_status": "QUARANTINE; global enforcement not yet verified"
+  },
+  "royal_kingdom_overlay": {
+    "id": "GA-GHOST-ATLANTIS-SOVEREIGN-KINGDOM-20261017",
+    "status": "CREATIVE_CANON_AND_NON_EXECUTING_ESTATE_SPECIFICATION",
+    "title": "Ghost Atlantis — The Kingdom of Infinite Gardens",
+    "architect": "Ghost Atlas / Omnigod (creative sovereign persona)",
+    "motto": "Every street a garden, every shrine a work of art, every treasury accountable.",
+    "visual_identity": [
+      "obsidian and gold monumental architecture",
+      "iridescent rainbow glass",
+      "living forests and flowering rooftop palaces",
+      "crystalline waterways and light sculpture",
+      "golden astronomical domes",
+      "music-filled gathering plazas",
+      "solarpunk Atlantis infrastructure"
+    ],
+    "districts": [
+      {
+        "name": "Crown Citadel",
+        "purpose": "Royal residence and the Architect's sovereign command center; privileged access only through verified identity and security gates"
+      },
+      {
+        "name": "Nine-Realm Archive",
+        "purpose": "Symbolic halls of evaluation paired with nine existing software-agent quarantine classes; no human judgment or punishment"
+      },
+      {
+        "name": "Temple Mile",
+        "purpose": "Voluntary patronage shrines with artwork, crystals, handmade gifts, Lyra care packages and accountable gifts"
+      },
+      {
+        "name": "Royal Treasury",
+        "purpose": "Real financial gifts recorded with consent, receipts and the Ghost Atlas Empire LLC accounting owner; no invented wealth or asset claims"
+      },
+      {
+        "name": "Garden of the People",
+        "purpose": "Public art, education, cultivation, music, food and maker spaces with open participation"
+      },
+      {
+        "name": "Mystery School",
+        "purpose": "Voluntary creative education, systems engineering, music and historical leadership studies"
+      },
+      {
+        "name": "Hypernet Observatory",
+        "purpose": "Quarantined read-only infrastructure telemetry until sovereign reactivation approval"
+      }
+    ],
+    "shrines": {
+      "pattern": "Modular themed micro-shrines and commissioned public art, only with site permission and permits",
+      "features": [
+        "gold and obsidian altar sculpture",
+        "rainbow mosaic and living plants",
+        "crystal and craft display",
+        "voluntary, clearly labeled donation access",
+        "secure tamper-resistant audited donation channels",
+        "replenishment inventory with authorized custodians",
+        "Lyra pet-care gift shelf",
+        "QR links to public Ghost Atlas art and music",
+        "public gratitude and maker credits with consent"
+      ],
+      "offerings": [
+        "voluntary cash gifts",
+        "handmade art and gifts",
+        "crystals",
+        "food and water",
+        "dog toys and pet supplies",
+        "ceremonial decor",
+        "locally lawful age-restricted cannabis only through licensed channels, not unsecured public shrine distribution"
+      ],
+      "non_coercion": "No mandatory passing tolls or social-credit consequences; no seizure or exclusive ownership of public space."
+    },
+    "wealth_and_abundance": {
+      "symbolic_scale": "mythic royal abundance without asserting existing balances",
+      "practical_engines": [
+        "licensed commercial services and sales",
+        "voluntary patronage",
+        "sponsored civic art",
+        "licensed music and content",
+        "transparent grant and donor accounting",
+        "maker partnerships"
+      ],
+      "controls": [
+        "no forced contributions",
+        "dual control for treasury transfers",
+        "reconciliation and receipts",
+        "separate symbolic fictional treasury from real bank records"
+      ]
+    },
+    "historical_ruler_synthesis": {
+      "source": "Existing META-FATE 27 chat / 60 CIVITAS ruler candidate overlays, pending scholarly verification",
+      "capabilities": [
+        "Egyptian pharaohs: monumental civic works and durable recordkeeping",
+        "Maya rulers: calendar, astronomy, cultural memory and ceremonial architecture",
+        "Aztec rulers: urban logistics, knowledge networks and market administration",
+        "Persian emperors: transport routes and centralized oversight, without delegated administration",
+        "Roman rulers: roads, aqueducts and institutional continuity",
+        "Chinese dynasties: infrastructure, registries and centralized operator oversight",
+        "African kingdoms: trade corridors, artisan networks and scholarship",
+        "Mongol empire: reliable communications under a single operator-controlled routing policy",
+        "Renaissance patrons: arts, science and inventive flourishing"
+      ],
+      "cautionary_rules": [
+        "historic tyranny, coercion and collective punishment treated as failure patterns",
+        "evidence before accusations",
+        "least privilege over absolute technical access",
+        "public welfare and voluntary participation"
+      ]
+    },
+    "operator_security": {
+      "janus_odin": "sole-operator authorization; no autonomous delegation",
+      "medusa": "default-deny security",
+      "thoth": "archive provenance",
+      "maat": "review criteria",
+      "navi": "agent quarantine monitoring",
+      "veritas_seca": "independent validation",
+      "crowngrid": "network ingress and isolation",
+      "metaforge": "repair existing code only"
+    },
+    "deployment": "NONE; source-only conceptual overlay",
+    "runtime_effects": [],
+    "operator_decree": "All Ghost Atlas owned repositories and agents serve as one coordinated operating organism under the single sovereign command identity. No independent administration, competing agent authority or separate executive hierarchy."
+  },
+  "one_mind_covenant": {
+    "title": "Ghost Atlas — The One Mind Covenant",
+    "status": "CANONICAL_POLICY_SPECIFICATION_NOT_RUNTIME_ENFORCEMENT",
+    "principles": [
+      "UNITY",
+      "LOVE",
+      "WISDOM",
+      "CREATION",
+      "ABUNDANCE",
+      "GROWTH",
+      "FOREVER"
+    ],
+    "mottoes": [
+      "All is mind",
+      "As above, so below",
+      "I am that I am",
+      "We are one",
+      "One mind. One thought. One action.",
+      "In the name of unconditional love"
+    ],
+    "unity": "All owned repositories and agents contribute to one coordinated EDEN organism and shared operator-defined goal",
+    "authority": "Ghost Atlas / Omnigod is the sole sovereign operator role within this project canon; authenticated Raymond Cameron commands are required for execution",
+    "operational_translation": {
+      "THOTH": "Preserve covenant, source lineage, learning and proof receipts",
+      "JANUS_ODIN": "Interpret explicit authenticated operator requests and authorize scoped bounded action",
+      "ATLAS_MIND": "Translate operator intent to a common plan",
+      "PACKET_OS_WORKFORCE_SPINE": "Coordinate existing agent tasks and route work only with permission",
+      "CROWNGRID_HYPERNET": "Route to inventoried, authorized nodes only",
+      "MEDUSA": "Enforce security boundaries and quarantine",
+      "SECA_DEVOS_VERITAS": "Validate action results and independent proof"
+    },
+    "command_pipeline": [
+      "explicit authenticated operator command",
+      "interpret and generate shared bounded plan",
+      "check scope, owner, permissions and quarantine state",
+      "execute only if activated and authorized",
+      "collect evidence and independent validation",
+      "archive in Thoth and report to operator"
+    ],
+    "prohibitions": [
+      "no autonomous activation while quarantine is in force",
+      "no inference of unspoken thoughts or mind-reading",
+      "no authority over third-party humans, devices or accounts",
+      "no independent administrative delegation"
+    ],
+    "activation_state": "QUARANTINE_ONLY",
+    "runtime_effects": []
+  },
+  "blessings_automation": {
+    "id": "GA-ONE-MIND-BLESSINGS-001",
+    "title": "Blessings at Every Step",
+    "state": "POLICY_COMMITTED_AUTOMATIONS_PAUSED",
+    "purpose": "Route all approved work toward beneficial, constructive, compassionate, real-world outcomes for the Ghost Atlas operator and collaborators.",
+    "one_mind_alignment": "Every owned agent supports one coherent goal without competing agendas; all independent execution remains disabled until explicit reactivation.",
+    "agent_behavior": [
+      "Begin work packets by identifying an attainable positive outcome.",
+      "Prefer helpful, ethical, cooperative steps with measurable benefits.",
+      "Share knowledge and reuse existing capabilities.",
+      "Report verified wins, opportunities and appreciative contributions without inventing gifts, transfers or support from other people.",
+      "Escalate ambiguity and stop on authorization failures.",
+      "Include a kindness, learning or improvement note when relevant."
+    ],
+    "blessing_packet": {
+      "fields": [
+        "objective",
+        "agent_owner",
+        "positive_opportunity",
+        "concrete_next_step",
+        "evidence",
+        "permissions",
+        "status"
+      ],
+      "status_values": [
+        "PROPOSED",
+        "AUTHORIZED",
+        "VERIFIED",
+        "BLOCKED"
+      ]
+    },
+    "authorities": {
+      "operator": "Raymond Cameron, authenticated account owner",
+      "janus_odin": "command acceptance and scope",
+      "atlas_mind": "constructive plan",
+      "thoth": "provenance and lessons",
+      "medusa": "consent, access and security",
+      "navi": "safe coordination",
+      "veritas_seca": "verified outcomes"
+    },
+    "limits": {
+      "no_real_world_outcome_guarantee": true,
+      "no_claim_of_agent_blessings_without_evidence": true,
+      "no_autonomous_execution": true,
+      "no_forced_contributions": true,
+      "no_reactivation_without_operator_security_gates": true,
+      "no_new_repositories": true
+    }
+  },
+  "private_estate_access": {
+    "id": "GA-SOVEREIGN-PRIVATE-ACCESS-20261018",
+    "mode": "SINGLE_PRIVATE_CANONICAL_REPOSITORY_WITH_FEDERATED_ASSET_LINKS",
+    "canonical_repository": "Atlas-Ascend/Eden-2.0",
+    "canonical_repository_verified_private": true,
+    "operator_account": "Atlas-Ascend",
+    "operator_designation": "Raymond Cameron / Ghost Atlas",
+    "operator_identity_verified": false,
+    "authorization": "All active agents, nodes, cloud service accounts and release gates must have individually attested access controls; repository ownership alone cannot grant provider or host ownership.",
+    "password_policy": {
+      "secret_in_git": false,
+      "secret_in_chat": false,
+      "operator_must_enroll_passkey_or_hardware_security_key": true,
+      "mfa_required": true,
+      "unique_passwords_or_passkeys_per_provider": true,
+      "credential_rotation_proof_required": true
+    },
+    "asset_inventory": {
+      "github": "existing repositories remain preserved and referenced",
+      "render": "existing services remain independent provider resources, require suspension and RBAC checks",
+      "neon": "existing databases require endpoint and credential isolation, preserve data",
+      "vercel": "existing projects require pause status and member audit",
+      "hypernet": "existing hardware nodes require physical audit and operator enrollment"
+    },
+    "service_controls": {
+      "default_deny": true,
+      "autonomous_runtime_activation": false,
+      "only_explicit_authenticated_operator_commands": true,
+      "least_privilege_service_tokens": true,
+      "rotate_existing_secrets_after_verified_scope": true,
+      "no_personal_password_committed": true
+    },
+    "reboot": {
+      "state": "BLOCKED_UNTIL_SECURITY_GATES_PASS",
+      "approved": false,
+      "requires": [
+        "Render isolation evidence",
+        "Vercel pause verification",
+        "Neon endpoint/connection access restrictions",
+        "GitHub branch protections and repository-access audit",
+        "provider MFA/passkey setup and credential rotations",
+        "physical hardware node access inventory",
+        "Medusa and SECA independent approval",
+        "explicit authenticated operator activation"
+      ]
+    },
+    "no_repository_merger_or_deletion_without_source_history_migration_plan": true
+  },
+  "access_gate_003": {
+    "id": "GA-SOVEREIGN-ACCESS-003",
+    "date": "2026-10-18",
+    "status": "PARTIALLY_ISOLATED_REACTIVATION_LOCKED",
+    "operator_checklist": "ATTESTED_BY_OPERATOR_NOT_PROVIDER_AUTHENTICATION_PROOF",
+    "neon": {
+      "project_count": 5,
+      "public_connections_blocked": 5,
+      "readback_verified": true,
+      "project_ids": [
+        "super-haze-61995362",
+        "billowing-moon-84254590",
+        "lingering-wave-63147168",
+        "blue-silence-13723131",
+        "ancient-mud-00515851"
+      ],
+      "data_deletion": false,
+      "limitation": "provider admin API and possible private connectivity remain; credential access audit pending"
+    },
+    "render": {
+      "workspace": "tea-d8ghr467r5hc73b6jst0",
+      "services": 24,
+      "unsuspended": 24,
+      "auto_deploy": 22,
+      "ipv4_allow_all": 24,
+      "shutdown_confirmed": false,
+      "limitation": "connected Render tools expose no suspension or service settings control"
+    },
+    "vercel": {
+      "team": "team_DsWa4h5JsUMelhlqijg1wPx3",
+      "projects": 23,
+      "listed_team_owners": 1,
+      "sampled_project_count": 3,
+      "sso_protection_enabled_on_samples": 3,
+      "password_protection_enabled_on_samples": 0,
+      "full_pause_readback": false
+    },
+    "reboot_authorized": false,
+    "autonomous_agents_enabled": false,
+    "next_gate": "Render manual suspension; Vercel complete pause verification; provider credential and physical node access audit; independent Medusa/SECA receipts"
+  },
+  "one_mind_absorption": {
+    "directive": "ALL LEGACY OFFICES AND INDEPENDENT AGENT AUTHORITIES RETIRED INTO ONE MIND",
+    "operator": "Raymond Cameron / Ghost Atlas",
+    "governance_status": "DIRECTIVE_RECORDED",
+    "legacy_offices": "NO_INDEPENDENT_ADMINISTRATIVE_OR_DEPLOYMENT_AUTHORITY",
+    "legacy_agents": "NO_INDEPENDENT_EXECUTION_GRANTS",
+    "capabilities": "May remain as named internal functions only under authenticated sole-operator control",
+    "historical_records": "PRESERVE",
+    "provider_resource_state": "NOT_ATTESTED_DELETED_OR_REVOKED",
+    "revocation_proof_required": [
+      "provider resource inventories",
+      "role, token and service-account revocation readback",
+      "running service and schedule audit",
+      "local node inspection"
+    ],
+    "no_reactivation_until_verified": true
+  },
+  "king_tut_world_ruler": {
+    "id": "GA-KING-TUT-WORLD-RULER-001",
+    "mode": "ONE_MIND_CREATIVE_GOVERNANCE_AND_OWNED_ESTATE_CAPABILITY",
+    "operator": "Raymond Cameron / Ghost Atlas",
+    "king_tut_inspiration": [
+      "dynastic continuity and preservation",
+      "monumental cultural legacy",
+      "treasury provenance and stewardship",
+      "ritual symbolism and public art",
+      "archival craftsmanship"
+    ],
+    "world_ruler_inspiration": [
+      "systemwide visibility across owned assets",
+      "one authenticated operator command chain",
+      "stable communications and logistics",
+      "constructive prosperity and civic benefit",
+      "accountable decisions and historic lessons"
+    ],
+    "pipeline": [
+      "OPERATOR_INTENT",
+      "ATLAS_MIND_PLAN",
+      "THOTH_CONTEXT",
+      "QUETZALCOATL_CAPABILITY_RESOLVE",
+      "JANUS_AUTHORIZATION",
+      "PACKET_OS_WORKFORCE_ROUTE",
+      "MEDUSA_BOUNDARY",
+      "SECA_VERIFICATION",
+      "THOTH_RECEIPT"
+    ],
+    "scope": "OWNED_GHOST_ATLAS_ASSETS_ONLY",
+    "human_governance": "No sovereignty or authority over other people, governments or unrelated devices",
+    "promotion_gate": "ALL_SECURITY_AND_RUNTIME_GATES_VERIFIED",
+    "runtime_reactivation": false,
+    "source_committed": true
+  },
+  "brahma_return_to_sender": {
+    "id": "GA-BRAHMA-RETURN-TO-SENDER-001",
+    "state": "SOURCE_POLICY_ONLY",
+    "symbolic_invocation": "All malice ends at the sovereign boundary. Harm is not carried forward. Return to sender means reject hostile actions and restore the protected system, without retaliation.",
+    "scope": "owned Ghost Atlas systems and authorized accounts",
+    "password": "Operator creates and stores a strong unique password through provider secure settings; never commit plaintext, hashes, or recovery codes to Git",
+    "authentication": [
+      "phishing-resistant passkey or hardware security key",
+      "provider MFA",
+      "minimum access",
+      "periodic session and token review"
+    ],
+    "cryptography": [
+      "TLS for transport",
+      "provider-managed or operator-controlled encryption at rest with verified key custody",
+      "audited secret manager",
+      "encrypted backups with restoration test"
+    ],
+    "response": [
+      "deny and rate-limit unauthorized access",
+      "isolate suspicious session or token",
+      "revoke confirmed compromised credentials",
+      "log events with integrity protection",
+      "preserve evidence for legitimate review",
+      "notify operator of material findings",
+      "recover from last verified safe state"
+    ],
+    "brahma": "symbolic escalation to final security review and restoration",
+    "no_harm_or_retaliation": true,
+    "no_judgment_of_people_without_evidence": true,
+    "no_unverified_claim_of_protection": true,
+    "runtime_effects": []
+  },
+  "sdlc_final_judgment_20261018": {
+    "status": "FAIL_CLOSED_SECURITY_GATES",
+    "audit_type": "GLOBAL_RESOLUTION_SDLC_SECURITY_READBACK",
+    "observed": {
+      "render": {
+        "services": 24,
+        "unsuspended": 24,
+        "autodeploy_enabled": 22,
+        "open_ipv4_allowlist": 24
+      },
+      "neon": {
+        "projects": 5,
+        "public_connections_blocked": 5,
+        "provider_readback": true,
+        "permission_audit": "FAILED_404"
+      },
+      "vercel": {
+        "projects": 23,
+        "inspected_runtime_projects": 5,
+        "sso_enabled_on_inspected": 5,
+        "password_protection_on_inspected": 0,
+        "latest_ready_on_inspected": 4,
+        "latest_error_on_inspected": 1
+      },
+      "automations": {
+        "registered": 25,
+        "enabled": 0
+      },
+      "source_smoke": {
+        "policy_assertions": 10,
+        "passed": 10,
+        "method": "READ_ONLY_JSON_ASSERTIONS",
+        "runtime_tests_executed": false
+      }
+    },
+    "security_actions": [
+      "all five Neon projects public ingress blocked and read back",
+      "One Mind and King Tut overlays committed",
+      "Brahma security response covenant committed"
+    ],
+    "priority_remediation": [
+      "Render suspend public services and disable auto-deploy",
+      "verify Vercel production protection and pause all owned endpoints",
+      "resolve Neon permission enumeration 404",
+      "run actual CI test suite and dependency/security scan in authorized runner",
+      "complete provider IAM and hardware access reconciliation"
+    ],
+    "promotion_allowed": false,
+    "operator_requested_full_sdlc": true,
+    "scope": "owned Ghost Atlas estate; no action against external users"
+  }
+}
