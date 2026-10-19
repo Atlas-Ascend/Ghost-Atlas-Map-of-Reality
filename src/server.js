@@ -7,6 +7,7 @@ import { VERSION, layers, nodes, edges, organRegistry23, wheel, campaign, valida
 import { verifyGitHubActionsOidc } from './github-oidc.js';
 import { acceptPhysicalSnapshot, getLiveHistory, getLiveState } from './live-state.js';
 import { buildOrganismPacket } from './organism-packet.js';
+import { runSingularityCycle, getSingularityCycleState } from './singularity-cycle.js';
 import { getResidentDoctrine, getDoctrineOfDoctrines, getTriModeOs, buildResidentBootstrap } from './doctrine.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -95,4 +96,4 @@ async function handle(req,res){
 }
 
 export const server=http.createServer((req,res)=>{handle(req,res).catch(error=>json(res,500,{error:'INTERNAL_ERROR',reason:error.message}));});
-if(process.argv[1]===fileURLToPath(import.meta.url)) server.listen(port,host,()=>console.log(`Ghost Atlas Map of Reality v${VERSION} listening on http://${host}:${port}`));
+if(process.argv[1]===fileURLToPath(import.meta.url)) server.listen(port,host,()=>{console.log(`Ghost Atlas Map of Reality v${VERSION} listening on http://${host}:${port}`);runSingularityCycle('startup').catch(error=>console.error('EDEN_SINGULARITY_CYCLE_BOOT_FAILURE',error.message));});
