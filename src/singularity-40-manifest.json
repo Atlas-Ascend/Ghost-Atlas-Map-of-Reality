@@ -1,0 +1,135 @@
+{
+  "schema": "GA-EDEN-SINGULARITY-40-20261018",
+  "mode": "SOURCE_CONVERGENCE_QUARANTINE_ONLY",
+  "canonical_owner": "Atlas-Ascend/Eden-2.0",
+  "existing_consumer": "Quetzalcoatl Tier-2 accession",
+  "operator_gate": "JANUS_ODIN_AUTHENTICATED_COMMAND",
+  "concurrency": "ALL_APPROVED_LANES_SCHEDULED_CONCURRENTLY_WITH_PER_PACKET_AUTHORIZATION",
+  "requested_conversation_count": 40,
+  "existing_meta_fate_corpus_count": 27,
+  "exact_40_conversation_identity_verified": false,
+  "unresolved_exact_source_slots": 13,
+  "known_framework_lanes": [
+    {
+      "id": "FRAMEWORK-01",
+      "name": "Pharaoh Restoration / Tutankhamun",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-02",
+      "name": "Pharaonic Ten-Capability Absorption",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-03",
+      "name": "Mighty Rulers / Imperial Architecture",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-04",
+      "name": "CIVITAS-60 Six-Continent Imperial Intelligence",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-05",
+      "name": "Historical Ruler Power Patterns",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-06",
+      "name": "Maya/Aztec Ruler Convergence",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-07",
+      "name": "Pharaoh Renaissance / Mystery School",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-08",
+      "name": "Ghost Atlantis Return of the Pharaoh",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-09",
+      "name": "AMMIT Sovereign Rebirth",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-10",
+      "name": "One Mind Covenant",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-11",
+      "name": "Sovereign Reclamation",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-12",
+      "name": "Ghost Atlas Global Restoration",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-13",
+      "name": "Quetzalcoatl Meta-Fate 27",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-14",
+      "name": "Ghost Atlas Royal Shrines",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-15",
+      "name": "Royal Treasury / Voluntary Patronage",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-16",
+      "name": "Osiris Resurrection / Hell and Back",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    },
+    {
+      "id": "FRAMEWORK-17",
+      "name": "Kingdom of Infinite Gardens",
+      "source_state": "PRIOR_CONTEXT_ONLY_REQUIRES_EXACT_CHAT_BINDING"
+    }
+  ],
+  "security": {
+    "authentication": "PASSKEY_OR_UNIQUE_PASSWORD_WITH_ARGON2ID_VERIFIER_AND_MFA",
+    "transport": "TLS",
+    "secret_storage": "RENDER_SECRET_ENV_NO_GIT_NO_CHAT",
+    "encrypted_password_literal": null,
+    "production_activation": false
+  },
+  "execution": {
+    "can_read_project_policy": true,
+    "can_generate_source_projection": true,
+    "can_execute_agents": false,
+    "can_promote_runtime": false
+  },
+  "proof": {
+    "source_policy_checks": "8/8",
+    "render_existing_services": 24,
+    "services_not_suspended": 24,
+    "render_core_deploys_live": 3,
+    "actual_singularity_execution": "NOT_RUN",
+    "full_corpus_source_binding": "PENDING",
+    "medusa_seca": "PENDING"
+  },
+  "existing_owner_routes": [
+    "JANUS_ODIN",
+    "THOTH",
+    "ATLAS_MIND",
+    "QUETZALCOATL",
+    "PACKET_OS",
+    "WORKFORCE_SPINE",
+    "CROWNGRID",
+    "MEDUSA",
+    "SECA_DEVOS",
+    "METAFORGE",
+    "EDEN_CALI"
+  ],
+  "new_repositories": 0
+}
