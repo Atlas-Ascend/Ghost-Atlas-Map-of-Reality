@@ -64,6 +64,11 @@ const serveSovereignInterface = (req,res) => {
 async function handle(req,res){
   const url = new URL(req.url,`http://${req.headers.host||'localhost'}`);
   if(req.method==='GET'&&(url.pathname==='/singularity'||url.pathname==='/singularity-40')) return serveSovereignInterface(req,res);
+  if(req.method==='GET'&&url.pathname==='/api/v1/singularity/cycle'){
+    if(!singularityAuthorized(req)) return json(res,401,{error:'OPERATOR_AUTH_REQUIRED'});
+    return json(res,200,getSingularityCycleState());
+  }
+
   if(req.method==='GET'&&url.pathname==='/health'){const live=getLiveState();const meta=getDoctrineOfDoctrines();return json(res,200,{status:'ok',service:'ghost-atlas-map-of-reality',version:VERSION,validation:validateModel(),doctrine:{version:getResidentDoctrine().version,status:'ACTIVE'},meta_doctrine:{version:meta.version,status:meta.status},tri_mode_os:{version:getTriModeOs().version,status:getTriModeOs().status},physical_evidence:{state:live.state,age_seconds:live.age_seconds},organism_packet:{contract:'GA-C2P-1',state:buildOrganismPacket(live).state},time:new Date().toISOString()});}
   if(req.method==='GET'&&url.pathname==='/api/v1/map') return json(res,200,mapSnapshot());
   if(req.method==='GET'&&url.pathname==='/api/v1/layers') return json(res,200,{layers});
